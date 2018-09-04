@@ -22,7 +22,7 @@ void TankDrive::Initialize() {
 
 void TankDrive::Execute() {
 	Robot::drive->tankDrive(Robot::oi->getLeftStick()->GetY(), Robot::oi->getRightStick()->GetY());
-	std::cout << Robot::oi->getLeftStick()->GetY() << std::endl;
+	//std::cout << Robot::oi->getLeftStick()->GetY() << std::endl;
 
 }
 

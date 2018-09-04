@@ -6,19 +6,25 @@
 /*----------------------------------------------------------------------------*/
 
 #include "OI.h"
+#include "Commands/ArmMove.h"
 
-#include <WPILib.h>
-
-OI::OI() : left(new Joystick(0)), right(new Joystick(1)) {
+OI::OI() : left(new Joystick(1)), right(new Joystick(0)), arm(new Joystick(2)),
+	armUp(new JoystickButton(left, 4)), armDown(new JoystickButton(left, 3)) {
 	// Process operator interface input here.
-
+	armUp->WhenPressed(new ArmMove(0.2));
+	armDown->WhenPressed(new ArmMove(-0.2));
+	armUp->WhenReleased(new ArmMove(0));
+	armDown->WhenReleased(new ArmMove(0));
 }
 
-frc::Joystick* OI::getLeftStick()
-{
+frc::Joystick* OI::getLeftStick() {
 	return left;
 }
 
 frc::Joystick* OI::getRightStick() {
 	return right;
+}
+
+frc::Joystick* OI::getArmStick() {
+	return arm;
 }

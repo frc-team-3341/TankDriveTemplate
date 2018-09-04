@@ -12,6 +12,7 @@
 #include <iostream>
 
 DriveTrain* Robot::drive;
+Arm* Robot::arm;
 OI* Robot::oi;
 
 void Robot::RobotInit() {
@@ -20,6 +21,7 @@ void Robot::RobotInit() {
 	frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
 
 	drive = new DriveTrain();
+	arm = new Arm();
 	oi = new OI();
 }
 
