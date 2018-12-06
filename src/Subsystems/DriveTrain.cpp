@@ -7,7 +7,12 @@ using namespace std;
 DriveTrain::DriveTrain() : Subsystem("DriveTrain"),
 left(new TalonSRX(LEFTMOTOR)), right(new TalonSRX(RIGHTMOTOR)) //, arm(new TalonSRX(2))
 {
-	right->SetInverted(true);
+	//right->SetInverted(false);
+	left->SetInverted(true);
+	//left->ConfigSelectedFeedbackSensor(FeedbackDevice::CTRE_MagEncoder_Relative, 0, 10);
+	//right->ConfigSelectedFeedbackSensor(FeedbackDevice::CTRE_MagEncoder_Relative, 0, 10);
+	//left->Config_kP(0, 1, 10);
+	//right->Config_kP(0, 1, 10);
 }
 
 void DriveTrain::InitDefaultCommand() {

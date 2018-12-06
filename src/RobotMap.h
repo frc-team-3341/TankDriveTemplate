@@ -14,8 +14,8 @@
  * floating around.
  */
 
-constexpr int LEFTMOTOR = 3;
-constexpr int RIGHTMOTOR = 1;
+constexpr int LEFTMOTOR = 2;
+constexpr int RIGHTMOTOR = 3;
 
 
 // For example to map the left and right motors, you could define the

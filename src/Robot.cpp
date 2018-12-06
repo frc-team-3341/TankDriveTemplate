@@ -10,6 +10,7 @@
 #include <Commands/Scheduler.h>
 #include <SmartDashboard/SmartDashboard.h>
 #include <iostream>
+#include "NetworkTablesInterface.h"
 
 DriveTrain* Robot::drive;
 OI* Robot::oi;
@@ -21,6 +22,8 @@ void Robot::RobotInit() {
 
 	drive = new DriveTrain();
 	oi = new OI();
+
+	std::cout << NetworkTablesInterface::getNumberCV() << std::endl;
 }
 
 /**
@@ -81,6 +84,9 @@ void Robot::TeleopPeriodic() {
 	//std::cout << "help" << std::endl;
 }
 
-void Robot::TestPeriodic() {}
+void Robot::TestPeriodic()
+{
+	std::cout << NetworkTablesInterface::getNumberCV() << std::endl;
+}
 
 START_ROBOT_CLASS(Robot)
