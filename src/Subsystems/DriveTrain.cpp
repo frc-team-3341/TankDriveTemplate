@@ -5,7 +5,7 @@
 using namespace std;
 
 DriveTrain::DriveTrain() : Subsystem("DriveTrain"),
-<<<<<<< HEAD
+
 left(new TalonSRX(LEFTMOTOR)), right(new TalonSRX(RIGHTMOTOR)) //, arm(new TalonSRX(2))
 {
 	//right->SetInverted(false);
@@ -14,11 +14,8 @@ left(new TalonSRX(LEFTMOTOR)), right(new TalonSRX(RIGHTMOTOR)) //, arm(new Talon
 	//right->ConfigSelectedFeedbackSensor(FeedbackDevice::CTRE_MagEncoder_Relative, 0, 10);
 	//left->Config_kP(0, 1, 10);
 	//right->Config_kP(0, 1, 10);
-=======
-left(new TalonSRX(LEFTMOTOR)), right(new TalonSRX(RIGHTMOTOR))/*, arm(new TalonSRX(2))*/ {
-	right->SetInverted(true);
->>>>>>> 5e50dd2e3867aeac278e34df633dd0cf27a5cf91
 }
+
 
 void DriveTrain::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
