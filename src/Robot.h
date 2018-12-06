@@ -12,6 +12,7 @@
 #include <TimedRobot.h>
 
 #include "Subsystems/DriveTrain.h"
+#include "Subsystems/Arm.h"
 #include "Commands/TankDrive.h"
 #include "Commands/help.h"
 #include "OI.h"
@@ -19,6 +20,7 @@
 class Robot : public frc::TimedRobot {
 public:
 	static DriveTrain* drive;
+	static Arm* arm;
 	static OI* oi;
 
 	void RobotInit() override;

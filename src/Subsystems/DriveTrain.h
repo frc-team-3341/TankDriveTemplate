@@ -19,6 +19,7 @@ public:
 	DriveTrain();
 	void InitDefaultCommand();
 	void tankDrive(double leftVal, double rightVal);
+	//void armMove(double moveVal);
 	//double startAbsTicks;
 	//void setStartAbsTicks();
 
