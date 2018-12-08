@@ -5,6 +5,7 @@
 using namespace std;
 
 DriveTrain::DriveTrain() : Subsystem("DriveTrain"),
+
 left(new TalonSRX(LEFTMOTOR)), right(new TalonSRX(RIGHTMOTOR)) //, arm(new TalonSRX(2))
 {
 	//right->SetInverted(false);
@@ -14,6 +15,7 @@ left(new TalonSRX(LEFTMOTOR)), right(new TalonSRX(RIGHTMOTOR)) //, arm(new Talon
 	//left->Config_kP(0, 1, 10);
 	//right->Config_kP(0, 1, 10);
 }
+
 
 void DriveTrain::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
