@@ -18,8 +18,8 @@ private:
 	frc::Joystick* right;
 	frc::Joystick* arm;
 
-	frc::Button* armUp;
-	frc::Button* armDown;
+	//frc::Button* armUp;
+	//frc::Button* armDown;
 
 public:
 	OI();

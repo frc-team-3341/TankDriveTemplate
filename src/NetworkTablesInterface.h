@@ -10,6 +10,7 @@ public:
 
 	static double getNumberCV();
 	static double check();
+	static double help();
 };
 
 #endif /* NETWORKTABLESINTERFACE_H_ */

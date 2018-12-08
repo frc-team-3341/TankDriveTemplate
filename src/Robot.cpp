@@ -88,7 +88,9 @@ void Robot::TeleopPeriodic() {
 
 void Robot::TestPeriodic()
 {
-	std::cout << NetworkTablesInterface::getNumberCV() << std::endl;
+	std::cout << "test 1: " << NetworkTablesInterface::getNumberCV() << std::endl;
+	std::cout << "test 2: " <<  NetworkTablesInterface::check() << std::endl;
+	std::cout << "test 3: " << NetworkTablesInterface::help() << std::endl;
 }
 
 START_ROBOT_CLASS(Robot)
